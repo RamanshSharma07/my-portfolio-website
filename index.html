@@ -6,75 +6,92 @@
     <title>Ramansh Sharma | Android & CMP Developer</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <style>
-        /* This is for the Glassmorphism animation */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        .animate-float {
-            animation: float 4s ease-in-out infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen">
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <div class="text-xl font-bold tracking-wider">RAMANSH.DEV</div>
-        <div class="space-x-6 text-sm text-slate-400">
-            <a href="#work" class="hover:text-white transition">WORK</a>
-            <a href="#about" class="hover:text-white transition">ABOUT</a>
-            <a href="#contact" class="hover:text-teal-400 transition">CONTACT</a>
+    <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto p-6 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-wider text-white">
+                <a href="#" class="hover:text-white transition">RAMANSH.DEV</a>
+            </div>
+            
+            <div class="hidden md:block space-x-6 text-sm text-slate-400">
+                <a href="#work" class="hover:text-white transition">WORK EXPERIENCE</a>
+                <a href="#projects" class="hover:text-white transition">PROJECTS</a>
+                <a href="#contact" class="hover:text-teal-400 transition">CONTACT</a>
+            </div>
         </div>
     </nav>
 
-    <main class="flex flex-col md:flex-row items-center justify-center gap-12 mt-20 max-w-6xl mx-auto px-6">
+    <main class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-12 md:mt-20 max-w-6xl mx-auto px-6">
         
-        <div class="flex-1 space-y-6">
-            <h2 class="text-teal-400 font-medium tracking-wide uppercase text-sm">Android & Multiplatform Engineer</h2>
-            <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+        <div class="flex-1 space-y-6 text-center md:text-left order-2 md:order-1">
+            <h2 class="text-teal-400 font-medium tracking-wide uppercase text-xs md:text-sm hero-animate">
+                Android & Multiplatform Engineer
+            </h2>
+            
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight hero-animate delay-100">
                 Building scalable apps with <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">Kotlin.</span>
             </h1>
-            <p class="text-slate-400 max-w-md text-lg">
+            
+            <p class="text-slate-400 max-w-md mx-auto md:mx-0 text-base md:text-lg hero-animate delay-200">
                 I bridge the gap between mobile and web using Modular Clean Architecture and Jetpack Compose.
             </p>
-            <div class="pt-4 flex gap-4">
-                <button class="bg-teal-500 hover:bg-teal-600 text-black px-8 py-3 rounded-full font-bold transition">View Projects</button>
-                <button class="border border-slate-600 hover:border-white px-8 py-3 rounded-full font-medium transition">Contact Me</button>
+            
+            <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start hero-animate delay-300">
+                <a href="#projects" class="bg-teal-500 hover:bg-teal-600 text-black px-8 py-3 rounded-full font-bold transition w-full transform hover:-translate-y-1 shadow-lg shadow-teal-500/20 sm:w-auto text-center">
+                    View Projects
+                </a>
+                <a href="#contact" class="border border-slate-600 hover:border-white px-8 py-3 rounded-full font-medium transition w-full sm:w-auto text-center">
+                    Contact Me
+                </a>
             </div>
         </div>
 
-        <div class="relative group animate-float">
-            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-700 shadow-2xl relative z-10">
-                <img src="pic.png" 
-                     alt="Profile" 
-                     class="w-full h-full object-cover">
-            </div>
-
-            <div class="absolute -bottom-6 -right-4 z-20
-                        backdrop-blur-xl bg-white/10 border border-white/20
-                        p-4 rounded-2xl shadow-xl
-                        flex items-center gap-4">
-                <div class="w-10 h-10 bg-gradient-to-tr from-pink-500 to-orange-400 rounded-lg flex items-center justify-center">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                </div>
-                <div>
-                    <p class="text-slate-400 text-xs uppercase font-bold tracking-wider">Current Project</p>
-                    <p class="text-white font-semibold">Asana Clone (CMP)</p>
-                </div>
-            </div>
+        <div class="relative order-1 md:order-2 hero-animate delay-500">
             
-            <div class="absolute inset-0 bg-teal-500 blur-[80px] opacity-20 -z-10 rounded-full"></div>
+            <div class="animate-float relative">
+                
+                <div class="w-48 h-48 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-700 shadow-2xl relative z-10 mx-auto">
+                    <img src="pic.png" 
+                         alt="Profile" 
+                         class="w-full h-full object-cover">
+                </div>
+
+                <div class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-4 z-20
+                            backdrop-blur-xl bg-white/10 border border-white/20
+                            p-3 rounded-2xl shadow-xl
+                            flex items-center gap-3 w-max max-w-none"> 
+                    
+                    <div class="w-10 h-10 bg-gradient-to-br from-orange-400 via-white to-green-500 rounded-lg flex items-center justify-center shadow-sm shrink-0">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <p class="text-white font-bold text-xs md:text-sm whitespace-nowrap">
+                            Software Developer @ ESC
+                        </p>
+                        <p class="text-slate-300 text-[10px] md:text-xs mt-0.5 flex items-center gap-1 whitespace-nowrap">
+                            Funded by Govt of India 🇮🇳
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="absolute inset-0 bg-teal-500 blur-[60px] md:blur-[80px] opacity-20 -z-10 rounded-full"></div>
+                
+            </div>
         </div>
 
     </main>
 
-    <section id="work" class="max-w-5xl mx-auto px-6 py-24">
+    <section id="work" class="max-w-5xl mx-auto px-6 py-24 reveal">
         <h3 class="text-3xl font-bold mb-12 text-center text-white">Experience</h3>
         
-        <div class="space-y-16 border-l-2 border-slate-700 ml-3 pl-8 relative">
+        <div class="space-y-16 border-l-2 border-slate-700 ml-3 pl-6 md:pl-8 relative">
             
             <div class="relative group">
                 <div class="absolute -left-[43px] top-1 h-6 w-6 rounded-full border-4 border-slate-900 bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.6)]"></div>
@@ -152,21 +169,36 @@
         </div>
     </section>
 
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-24">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-24 reveal">
+        <!-- <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
             <div>
                 <h3 class="text-3xl font-bold text-white">Featured Projects</h3>
                 <p class="text-slate-400 mt-2">Open Source, Multiplatform & Native Android</p>
             </div>
-            <a href="https://github.com/yourusername" target="_blank" class="text-teal-400 hover:text-white transition font-medium flex items-center gap-2 group">
+            <a href="https://github.com/RamanshSharma07" target="_blank" class="text-teal-400 hover:text-white transition font-medium flex items-center gap-2 group">
                 View GitHub Profile 
                 <span class="group-hover:translate-x-1 transition-transform">→</span>
             </a>
+        </div> -->
+
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+            
+            <div>
+                <h3 class="text-3xl font-bold text-white">Featured Projects</h3>
+                <p class="text-slate-400 mt-2">Open Source, Multiplatform & Native Android</p>
+            </div>
+            
+            <a href="https://github.com/RamanshSharma07" target="_blank" class="text-teal-400 hover:text-white transition font-medium flex items-center gap-2 group">
+                View GitHub Profile 
+                <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+            
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
             
-            <div class="group bg-slate-900 rounded-2xl border border-teal-500/30 hover:border-teal-400 transition-all duration-300 flex flex-col">
+            <a href="https://github.com/RamanshSharma07/Animated_Bottom_Navigation" target="_blank" 
+               class="group bg-slate-900 rounded-2xl border border-teal-500/30 hover:border-teal-400 transition-all duration-300 flex flex-col cursor-pointer">
                 <div class="p-8 flex-1">
                     <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-white group-hover:text-teal-400 transition">Animated Bottom Navigation</h4>
@@ -182,9 +214,10 @@
                         <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">Animation</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="group bg-slate-900 rounded-2xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 flex flex-col">
+            <a href="https://github.com/RamanshSharma07/CMP-BookShelf" target="_blank"
+               class="group bg-slate-900 rounded-2xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 flex flex-col cursor-pointer">
                 <div class="p-8 flex-1">
                     <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-white group-hover:text-teal-400 transition">CMP BookShelf</h4>
@@ -200,9 +233,10 @@
                         <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">Room DB</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="group bg-slate-900 rounded-2xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 flex flex-col">
+            <a href="https://github.com/RamanshSharma07/Compressify" target="_blank"
+               class="group bg-slate-900 rounded-2xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 flex flex-col cursor-pointer">
                 <div class="p-8 flex-1">
                     <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-white group-hover:text-teal-400 transition">Compressify</h4>
@@ -218,9 +252,10 @@
                         <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">Canvas</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="group bg-slate-900 rounded-2xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 flex flex-col">
+            <a href="https://github.com/RamanshSharma07/Clarity_Notes" target="_blank"
+               class="group bg-slate-900 rounded-2xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 flex flex-col cursor-pointer">
                 <div class="p-8 flex-1">
                     <div class="flex justify-between items-start mb-4">
                         <h4 class="text-xl font-bold text-white group-hover:text-teal-400 transition">Clarity Notes</h4>
@@ -236,9 +271,10 @@
                         <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">JWT Security</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="group md:col-span-2 bg-slate-900 rounded-2xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300">
+            <a href="https://github.com/RamanshSharma07/KMP-E-Commerce" target="_blank"
+               class="group md:col-span-2 bg-slate-900 rounded-2xl border border-slate-700 hover:border-teal-500/50 transition-all duration-300 block cursor-pointer">
                 <div class="p-8">
                     <div class="flex justify-between items-start mb-6">
                         <h4 class="text-xl font-bold text-white group-hover:text-teal-400 transition">KMP E-Commerce</h4>
@@ -262,10 +298,65 @@
                         <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">Modular Architecture</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
         </div>
     </section>
+
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-24 text-center reveal">
+        
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+            Ready to build something <span class="text-teal-400">scalable?</span>
+        </h2>
+        
+        <p class="text-slate-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+            I am currently open for <strong>Android</strong> and <strong>Kotlin Multiplatform</strong> opportunities. 
+            Whether you have a question about Clean Architecture or just want to say hi, my inbox is open!
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-20">
+            <a href="mailto:ramanshsharma53@gmail.com" 
+               class="px-8 py-4 bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold rounded-full transition-all transform hover:-translate-y-1 shadow-lg shadow-teal-500/20">
+                Say Hello 👋
+            </a>
+            <a href="https://www.linkedin.com/in/ramansh-sharma-697641262" target="_blank" 
+               class="px-8 py-4 border border-slate-700 hover:border-white text-white font-medium rounded-full transition-all hover:bg-slate-800">
+                Connect on LinkedIn
+            </a>
+        </div>
+
+        <footer class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-slate-500 text-sm">
+                <p>&copy; 2025 Ramansh Sharma. Built with <span class="text-slate-400">Tailwind CSS</span>.</p>
+            </div>
+            
+            <div class="flex gap-8">
+                <a href="https://github.com/RamanshSharma07" target="_blank" class="text-slate-400 hover:text-teal-400 transition text-sm font-medium">GITHUB</a>
+                <a href="https://www.linkedin.com/in/ramansh-sharma-697641262" target="_blank" class="text-slate-400 hover:text-teal-400 transition text-sm font-medium">LINKEDIN</a>
+                <a href="mailto:ramanshsharma53@gmail.com" class="text-slate-400 hover:text-teal-400 transition text-sm font-medium">EMAIL</a>
+            </div>
+        </footer>
+
+    </section>
+
+    <script>
+    // Simple Scroll Observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            // Find all elements with class 'reveal' and start watching them
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
 
     </body>
 </html>
